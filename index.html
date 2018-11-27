@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: black;
+        color: white;
+        overflow: hidden;
+      }
+      body {
+        width: 50%;
+        height: 100%;
+        min-width: 350px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .flex {
+        display: flex;
+      }
+      p {
+        margin: 0 5px;
+        padding: 0;
+      }
+      h1 {
+        margin: 0 5px;
+        padding: 0;
+      }
+    </style>
+    <title>show0317sw | portfolio</title>
+  </head>
+  <body>
+    <div class="flex" style="margin:10px">
+      <img
+        src="./img/show0317sw3.png"
+        alt="show0317sw"
+        height="70px"
+        width="70px"
+      />
+      <div>
+        <h1>吉川 祥大</h1>
+        <div class="flex">
+          <p>2000-12-27生</p>
+          <p id="age"></p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div><h3>SNSとか</h3></div>
+    <a href="https://github.com/show0317sw">GitHub</a>
+    <a href="https://twitter.com/show0317sw">Twitter</a>
+    <hr />
+    <div>
+      <h3>product</h3>
+      <div>
+        <h4>ポートフォリオサイト</h4>
+        <p>このページ</p>
+        <a href="https://github.com/show0317sw/portfolio">GitHub</a>
+      </div>
+      <div>
+        <h4>botちゃん</h4>
+        <p>
+          LINEを利用してGoogleシートに生活を記録するプログラムのSlack版として始めたがいろいろ違う
+        </p>
+        <a href="https://github.com/show0317sw/bot-chan">GitHub</a>
+      </div>
+      <div>
+        <h4>rayster</h4>
+        <p>メディアプレイヤーのElectron版</p>
+        <a href="https://github.com/show0317sw/rayster">GitHub</a>
+      </div>
+      <div>
+        <h4>webの勉強用サイト</h4>
+        <a href="https://first.show0317sw.com/"
+          >https://first.show0317sw.com/</a
+        >
+        <a href="https://github.com/show0317sw/first-show0317sw.com">GitHub</a>
+      </div>
+      <div>
+        <h4>メディアプレイヤー</h4>
+        <a href="https://show0317sw.github.io/MediaPlayer/index.html"
+          >https://show0317sw.github.io/MediaPlayer/index.html</a
+        >
+        <a href="https://github.com/show0317sw/MediaPlayer">GitHub</a>
+      </div>
+      <div>
+        <h4>osu!のスキンセットリスト日本語版</h4>
+        <a
+          href="https://show0317sw.github.io/osu-SkinSetList-ja/SkinSetList-ja.html"
+          >https://show0317sw.github.io/osu-SkinSetList-ja/SkinSetList-ja.html</a
+        >
+        <a href="https://github.com/show0317sw/osu-SkinSetList-ja">GitHub</a>
+      </div>
+      <div><h4>LINEを利用してGoogleシートに生活を記録するプログラム</h4></div>
+    </div>
+    <script>
+      "use strict";
+      const birth = new Date("2000-12-27");
+      const now = new Date();
+      const age = Math.floor((now - birth) / 1000 / 60 / 60 / 24 / 365);
+      $("p#age").text(age + "歳");
+    </script>
+  </body>
+</html>
