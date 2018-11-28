@@ -39,9 +39,23 @@
         background: rgb(48, 48, 48);
         border-radius: 15px;
       }
-      a{color: aquamarine;}
-      a:hover{color: azure;}
-      a:visited{color: rgb(0, 132, 255);}
+      a {
+        color: aquamarine;
+      }
+      a:hover {
+        color: azure;
+      }
+      a:visited {
+        color: rgb(0, 132, 255);
+      }
+      .img {
+        height: auto;
+        width: auto;
+        max-height: 500px;
+        max-width: 100%;
+        object-fit: contain;
+        background: rgb(48, 48, 48);
+      }
     </style>
     <title>show0317sw | portfolio</title>
   </head>
@@ -71,19 +85,49 @@
       <div class="product">
         <h4>ポートフォリオサイト</h4>
         <p>このページ</p>
-        <a target="_blank" href="https://github.com/show0317sw/portfolio">GitHub</a>
+        <a target="_blank" href="https://github.com/show0317sw/portfolio"
+          >GitHub</a
+        >
+        <div class="flex">
+          <img
+            class="img"
+            src="./img/portfolio_site.png"
+            alt="portfolio_site"
+          />
+        </div>
       </div>
       <div class="product">
-        <h4>botちゃん</h4>
+        <h4>botちゃんの後継サービス(名前決めたい)</h4>
         <p>
-          LINEを利用してGoogleシートに生活を記録するプログラムのSlack版として始めたがいろいろ違う
+          botちゃんのSlack版として始めたがいろいろ違う
         </p>
-        <a target="_blank" href="https://github.com/show0317sw/bot-chan">GitHub</a>
+        <a target="_blank" href="https://github.com/show0317sw/bot-chan"
+          >GitHub</a
+        >
+        <div class="flex">
+          <img
+            class="img"
+            src="./img/koudou_kiroku.png"
+            alt="koudou_kiroku"
+          />
+        </div>
       </div>
       <div class="product">
         <h4>rayster</h4>
         <p>メディアプレイヤーのElectron版</p>
-        <a target="_blank" href="https://github.com/show0317sw/rayster">GitHub</a>
+        <a target="_blank" href="https://github.com/show0317sw/rayster"
+          >GitHub</a
+        >
+        <div class="flex">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JE8q-qkpdOg"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
       <div class="product">
         <h4>webの勉強用サイト</h4>
@@ -91,14 +135,32 @@
         <a target="_blank" href="https://first.show0317sw.com/"
           >https://first.show0317sw.com/</a
         >
-        <a  target="_blank" href="https://github.com/show0317sw/first-show0317sw.com">GitHub</a>
+        <a
+          target="_blank"
+          href="https://github.com/show0317sw/first-show0317sw.com"
+          >GitHub</a
+        >
+        <div class="flex">
+          <img
+            class="img"
+            src="./img/show0317sw_all.png"
+            alt="show0317sw_all"
+          />
+        </div>
       </div>
       <div class="product">
         <h4>メディアプレイヤー</h4>
-        <a  target="_blank" href="https://show0317sw.github.io/MediaPlayer/index.html"
+        <a
+          target="_blank"
+          href="https://show0317sw.github.io/MediaPlayer/index.html"
           >https://show0317sw.github.io/MediaPlayer/index.html</a
         >
-        <a  target="_blank" href="https://github.com/show0317sw/MediaPlayer">GitHub</a>
+        <a target="_blank" href="https://github.com/show0317sw/MediaPlayer"
+          >GitHub</a
+        >
+        <div class="flex">
+          <img class="img" src="./img/media_player.png" alt="media_player" />
+        </div>
       </div>
       <div class="product">
         <h4>osu!のスキンセットリスト日本語版</h4>
@@ -106,16 +168,34 @@
           href="https://show0317sw.github.io/osu-SkinSetList-ja/SkinSetList-ja.html"
           >https://show0317sw.github.io/osu-SkinSetList-ja/SkinSetList-ja.html</a
         >
-        <a  target="_blank" href="https://github.com/show0317sw/osu-SkinSetList-ja">GitHub</a>
+        <a
+          target="_blank"
+          href="https://github.com/show0317sw/osu-SkinSetList-ja"
+          >GitHub</a
+        >
+        <div class="flex">
+          <img
+            class="img"
+            src="./img/osu_skin_setlist.png"
+            alt="osu_skin_setlist"
+          />
+        </div>
       </div>
       <div class="product">
-        <h4>LINEを利用してGoogleシートに生活を記録するプログラム</h4>
+        <h4>botちゃん</h4>
+        <p>LINEを利用してGoogleシートに生活を記録するプログラム</p>
         <p>GAS利用なのでそのうちGitHubにコード上げるかもしれない</p>
+        <div class="flex">
+          <img class="img" src="./img/line_bot_chan.png" alt="LINE_botちゃん" />
+          <img
+            class="img"
+            src="./img/bot_chan_sheets.png"
+            alt="botちゃん_シート"
+          />
+        </div>
       </div>
     </div>
-    <div>
-      <p>&copy; 2018 Shota Yoshikawa</p>
-    </div>
+    <div><p>&copy; 2018 Shota Yoshikawa</p></div>
     <script>
       "use strict";
       const birth = new Date("2000-12-27");
@@ -123,10 +203,13 @@
       setInterval(() => {
         updateAge();
       }, 1000);
-      function updateAge(){
+      function updateAge() {
         let now = new Date();
         let age = Math.floor((now - birth) / 1000 / 60 / 60 / 24 / 365);
-        if($("p#age")[0].outerText == age + "歳" || $("p#age")[0].outerText == ""){
+        if (
+          $("p#age")[0].outerText == age + "歳" ||
+          $("p#age")[0].outerText == ""
+        ) {
           $("p#age").text(age + "歳");
         }
       }
