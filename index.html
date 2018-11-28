@@ -119,9 +119,17 @@
     <script>
       "use strict";
       const birth = new Date("2000-12-27");
-      const now = new Date();
-      const age = Math.floor((now - birth) / 1000 / 60 / 60 / 24 / 365);
-      $("p#age").text(age + "歳");
+      updateAge();
+      setInterval(() => {
+        updateAge();
+      }, 1000);
+      function updateAge(){
+        let now = new Date();
+        let age = Math.floor((now - birth) / 1000 / 60 / 60 / 24 / 365);
+        if($("p#age")[0].outerText == age + "歳" || $("p#age")[0].outerText == ""){
+          $("p#age").text(age + "歳");
+        }
+      }
     </script>
   </body>
 </html>
