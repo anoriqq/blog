@@ -70,6 +70,7 @@
         max-width: 100%;
         object-fit: contain;
         background: rgb(48, 48, 48);
+        margin: 0 auto;
       }
       .dev {
         color: red;
@@ -82,6 +83,9 @@
       h4 {
         margin: 0;
         padding: 0 5px;
+      }
+      .mid{
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -130,6 +134,28 @@
       <div class="product">
         <div class="flex">
           <h4 class="dev">開発中</h4>
+          <h4>U20 しりとりbot</h4>
+        </div>
+        <div class="flex">
+          <img
+            class="img"
+            src="./img/u20-shiritori.png"
+            alt="u20_shiritori_bot"
+          />
+        </div>
+        <a
+          target="_blank"
+          href="https://github.com/show0317sw/u20-shiritori-bot-nodejs"
+          >GitHub</a
+        >
+        <p>
+          U20やさしいかくめいラボというコミュニティから生まれたbot僕が作ったのはNode.js版だか､メンバーが各々の好きな言語で開発している｡運用は現状GCPで行っている｡
+        </p>
+        <p>使用技術: JavaScript / Node.js / Discord.js / PostgreSQL</p>
+      </div>
+      <div class="product">
+        <div class="flex">
+          <h4 class="dev">開発中</h4>
           <h4>fuwapath</h4>
         </div>
         <div>
@@ -146,13 +172,12 @@
         </p>
         <p>
           使用技術: HTML(pug) / CSS(bootstrap) / JavaScript / Node.js /
-          express.js / PostgreSQL / Slack API
+          express.js / PostgreSQL
         </p>
-        <h5></h5>
       </div>
       <div class="product">
         <div class="flex">
-          <h4 class="dev">開発中</h4>
+          <h4 class="dev">開発停止中</h4>
           <h4>rayster</h4>
         </div>
         <div>
@@ -245,14 +270,14 @@
       <div class="product">
         <h4>botちゃん</h4>
         <div class="flex">
-          <div>
+          <div class="mid">
             <img
               class="img"
               src="./img/line_bot_chan.png"
               alt="LINE_botちゃん"
             />
           </div>
-          <div>
+          <div class="mid">
             <img
               class="img"
               src="./img/bot_chan_sheets.png"
