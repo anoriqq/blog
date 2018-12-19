@@ -75,23 +75,31 @@
       .dev {
         color: red;
       }
-      iframe {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-      }
       h4 {
         margin: 0;
         padding: 0 5px;
       }
-      .mid{
+      .mid {
         margin: 0 auto;
+      }
+      .change {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
+    <p class="change">
+      このサイトの更新履歴は<a
+        target="_blank"
+        href="https://github.com/show0317sw/portfolio"
+        >GitHub</a
+      >を御覧ください｡
+    </p>
     <div>
-      <div class="flex" style="margin:10px">
+      <div class="flex" style="margin:30px 10px">
         <img
           src="./img/show0317sw3.png"
           alt="show0317sw"
@@ -103,7 +111,6 @@
           <p>show0317sw</p>
         </div>
       </div>
-      <p></p>
     </div>
     <hr />
     <div>
@@ -138,11 +145,9 @@
           <h4>U20 しりとりbot</h4>
         </div>
         <div class="flex">
-          <img
-            class="img"
-            src="./img/u20-shiritori.png"
-            alt="u20_shiritori_bot"
-          />
+          <div class="mid">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/S4HJ_Tsk-Ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
         <a
           target="_blank"
@@ -181,8 +186,9 @@
           <h4 class="dev">開発停止中</h4>
           <h4>rayster</h4>
         </div>
-        <div>
+        <div class="flex">
           <iframe
+            class="mid"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/JE8q-qkpdOg"
