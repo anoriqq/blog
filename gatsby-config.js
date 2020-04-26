@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `anoriqq's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `anoriqq`,
+      summary: `Web app developer in Tokyo. Interested in Node.js and TypeScript.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A blog powered by Gatsby`,
+    siteUrl: `https://www.anoriqq.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `anoriqq`,
+      github: `anoriqq`,
     },
   },
   plugins: [
@@ -53,18 +54,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-164509271-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `anoriqq's Blog`,
+        short_name: `anoriqq`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#4ff9ff`,
         display: `minimal-ui`,
         icon: `content/assets/anoriqq-icon.jpg`,
       },
