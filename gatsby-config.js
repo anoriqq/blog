@@ -81,9 +81,9 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                });
+              });
             },
             query: `
               {
@@ -104,7 +104,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
             title: "anoriqq's Blog RSS Feed",
           },
         ],
@@ -133,10 +133,10 @@ module.exports = {
       resolve: `gatsby-plugin-ts`,
       options: {
         fileName: `@types/graphql-types.d.ts`,
-      }
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
