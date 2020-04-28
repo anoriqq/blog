@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "lib": ["dom"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "./build",
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./@types/"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"],
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "public", ".cache", "@types"]
+}
