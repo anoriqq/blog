@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component

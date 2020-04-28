@@ -1,7 +1,13 @@
+'use strict';
+
 import React from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
+
+declare global {
+  const __PATH_PREFIX__: string;
+}
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
