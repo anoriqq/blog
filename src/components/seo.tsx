@@ -77,7 +77,7 @@ const SEO = ({ description, lang, meta, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ja`,
   meta: [],
   description: ``,
 };
