@@ -1832,6 +1832,8 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -1943,6 +1945,8 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -2149,6 +2153,8 @@ export type SiteFieldsEnum =
   'siteMetadata___siteUrl' |
   'siteMetadata___social___twitter' |
   'siteMetadata___social___github' |
+  'port' |
+  'host' |
   'polyfill' |
   'pathPrefix' |
   'id' |
@@ -2241,6 +2247,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2685,6 +2693,24 @@ export type SitePluginFieldsEnum =
   'pluginOptions___icon' |
   'pluginOptions___pathToConfigModule' |
   'pluginOptions___fileName' |
+  'pluginOptions___dark___palette___darkBase' |
+  'pluginOptions___dark___palette___darkMain' |
+  'pluginOptions___dark___palette___darkAccent' |
+  'pluginOptions___dark___palette___lightBase' |
+  'pluginOptions___dark___palette___lightMain' |
+  'pluginOptions___dark___palette___lightAccent' |
+  'pluginOptions___dark___global___bg' |
+  'pluginOptions___dark___global___color' |
+  'pluginOptions___dark___global___link' |
+  'pluginOptions___light___palette___darkBase' |
+  'pluginOptions___light___palette___darkMain' |
+  'pluginOptions___light___palette___darkAccent' |
+  'pluginOptions___light___palette___lightBase' |
+  'pluginOptions___light___palette___lightMain' |
+  'pluginOptions___light___palette___lightAccent' |
+  'pluginOptions___light___global___bg' |
+  'pluginOptions___light___global___color' |
+  'pluginOptions___light___global___link' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
   'browserAPIs' |
@@ -2817,7 +2843,49 @@ export type SitePluginPluginOptions = {
   icon?: Maybe<Scalars['String']>;
   pathToConfigModule?: Maybe<Scalars['String']>;
   fileName?: Maybe<Scalars['String']>;
+  dark?: Maybe<SitePluginPluginOptionsDark>;
+  light?: Maybe<SitePluginPluginOptionsLight>;
   pathCheck?: Maybe<Scalars['Boolean']>;
+};
+
+export type SitePluginPluginOptionsDark = {
+  palette?: Maybe<SitePluginPluginOptionsDarkPalette>;
+  global?: Maybe<SitePluginPluginOptionsDarkGlobal>;
+};
+
+export type SitePluginPluginOptionsDarkFilterInput = {
+  palette?: Maybe<SitePluginPluginOptionsDarkPaletteFilterInput>;
+  global?: Maybe<SitePluginPluginOptionsDarkGlobalFilterInput>;
+};
+
+export type SitePluginPluginOptionsDarkGlobal = {
+  bg?: Maybe<Scalars['String']>;
+  color?: Maybe<Scalars['String']>;
+  link?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsDarkGlobalFilterInput = {
+  bg?: Maybe<StringQueryOperatorInput>;
+  color?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsDarkPalette = {
+  darkBase?: Maybe<Scalars['String']>;
+  darkMain?: Maybe<Scalars['String']>;
+  darkAccent?: Maybe<Scalars['String']>;
+  lightBase?: Maybe<Scalars['String']>;
+  lightMain?: Maybe<Scalars['String']>;
+  lightAccent?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsDarkPaletteFilterInput = {
+  darkBase?: Maybe<StringQueryOperatorInput>;
+  darkMain?: Maybe<StringQueryOperatorInput>;
+  darkAccent?: Maybe<StringQueryOperatorInput>;
+  lightBase?: Maybe<StringQueryOperatorInput>;
+  lightMain?: Maybe<StringQueryOperatorInput>;
+  lightAccent?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsFeeds = {
@@ -2853,7 +2921,49 @@ export type SitePluginPluginOptionsFilterInput = {
   icon?: Maybe<StringQueryOperatorInput>;
   pathToConfigModule?: Maybe<StringQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
+  dark?: Maybe<SitePluginPluginOptionsDarkFilterInput>;
+  light?: Maybe<SitePluginPluginOptionsLightFilterInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsLight = {
+  palette?: Maybe<SitePluginPluginOptionsLightPalette>;
+  global?: Maybe<SitePluginPluginOptionsLightGlobal>;
+};
+
+export type SitePluginPluginOptionsLightFilterInput = {
+  palette?: Maybe<SitePluginPluginOptionsLightPaletteFilterInput>;
+  global?: Maybe<SitePluginPluginOptionsLightGlobalFilterInput>;
+};
+
+export type SitePluginPluginOptionsLightGlobal = {
+  bg?: Maybe<Scalars['String']>;
+  color?: Maybe<Scalars['String']>;
+  link?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsLightGlobalFilterInput = {
+  bg?: Maybe<StringQueryOperatorInput>;
+  color?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsLightPalette = {
+  darkBase?: Maybe<Scalars['String']>;
+  darkMain?: Maybe<Scalars['String']>;
+  darkAccent?: Maybe<Scalars['String']>;
+  lightBase?: Maybe<Scalars['String']>;
+  lightMain?: Maybe<Scalars['String']>;
+  lightAccent?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsLightPaletteFilterInput = {
+  darkBase?: Maybe<StringQueryOperatorInput>;
+  darkMain?: Maybe<StringQueryOperatorInput>;
+  darkAccent?: Maybe<StringQueryOperatorInput>;
+  lightBase?: Maybe<StringQueryOperatorInput>;
+  lightMain?: Maybe<StringQueryOperatorInput>;
+  lightAccent?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {
