@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Basic Options */
     "target": "ES2018",
-    "module": "ESNext",
+    // "module": "ESNext",
     "lib": ["dom", "ES2018", "ESNext"],
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -16,6 +16,9 @@
       "*": ["*"]
     },
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
 
     /* Strict Type-Checking Options */
     "strict": false
