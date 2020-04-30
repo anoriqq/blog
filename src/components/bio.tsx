@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from '../utils/typography';
@@ -62,7 +62,7 @@ const Bio = () => {
       <p>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
-        <a href={`/about`}>About</a>
+        <Link to={`/about`}>About</Link>
         {` `}
         <a href={`https://github.com/${social.github}`}>GitHub</a>
         {` `}
