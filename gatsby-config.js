@@ -1,3 +1,5 @@
+require('ts-node').register({ files: true });
+
 module.exports = {
   siteMetadata: {
     title: `anoriqq's Blog`,
@@ -133,6 +135,14 @@ module.exports = {
       resolve: `gatsby-plugin-ts`,
       options: {
         fileName: `@types/graphql-types.d.ts`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        dark: require(`${__dirname}/src/utils/theme.ts`).darkTheme,
+        light: require(`${__dirname}/src/utils/theme.ts`).lightTheme,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
