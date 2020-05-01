@@ -24,7 +24,7 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.10.7",
