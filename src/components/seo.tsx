@@ -72,7 +72,29 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        rel="prefetch"
+        as="font"
+        href="/fonts/Cica-Bold.ttf"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="prefetch"
+        as="font"
+        href="/fonts/Cica-Regular.ttf"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="prefetch"
+        as="font"
+        href="/fonts/Cica-RegularItalic.ttf"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />
+    </Helmet>
   );
 };
 
