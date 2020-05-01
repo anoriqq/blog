@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { GlobalStyles, Theme } from '../utils/theme';
+import { default as SEO } from '../components/seo';
 
 interface Props {
   theme: Theme;
@@ -20,6 +21,7 @@ const Container = styled.div`
 
 export default (props: Props) => (
   <React.Fragment>
+    <SEO title="About Me"/>
     <GlobalStyles theme={props.theme} />
     <Container>
       <h2># anoriqq (Shota Yoshikawa)</h2>
