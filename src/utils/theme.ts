@@ -33,32 +33,18 @@ export const palette = {
 } as const;
 
 export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
-  @font-face {
-    font-family: 'Cica';
-    font-style: normal;
-    src: url('/fonts/Cica-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'Cica';
-    font-style: italic;
-    src: url('/fonts/Cica-RegularItalic.ttf');
-  }
-  @font-face {
-    font-family: 'Cica';
-    font-style: Bold;
-    src: url('/fonts/Cica-Bold.ttf');
-  }
-
   html, body {
-    height: 100%;
     width: 100%;
     margin: 0;
+  }
+
+  * {
+    font-family: 'Noto Sans JP', sans-serif, Cica, メイリオ !important;
   }
 
   body {
     background-color: rgb(${props => props.theme.global.bg});
     color: rgb(${props => props.theme.global.color});
-    font-family: Cica;
   }
 
   a {
