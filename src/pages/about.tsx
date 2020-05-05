@@ -2,44 +2,45 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import { GlobalStyles, Theme } from '../utils/theme';
 import { default as SEO } from '../components/seo';
-
-interface Props {
-  theme: Theme;
-}
+import { AboutQuery } from '../../@types/graphql-types';
 
 const Container = styled.div`
   margin: 3rem auto;
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 `;
 
-const Summary = styled.p`
-  font-family: Cica !important;
-`
+interface Props {
+  theme: Theme;
+  data: AboutQuery;
+}
 
-export default (props: Props) => (
+export default ({ data, theme }: Props) => (
   <React.Fragment>
     <SEO title="About Me" />
-    <GlobalStyles theme={props.theme} />
+    <GlobalStyles theme={theme} />
     <Container>
-      <h2># anoriqq (Shota Yoshikawa)</h2>
-      <Summary>料理をしたり、筋トレしたり、TypeScript書いたりする</Summary>
-      <p>
-        <a href={`https://github.com/anoriqq`}>GitHub</a>
-        {` `}
-        <Link to="/">Blog</Link>
-        {` `}
-        <a href={`https://twitter.com/anoriqq`}>Twitter</a>
-        {` `}
-        <a href={`mailto:shota.yoshikawa@anoriqq.com`}>Email</a>
-      </p>
+      <section
+        dangerouslySetInnerHTML={{ __html: data.about?.html ?? 'No content' }}
+      />
     </Container>
   </React.Fragment>
 );
+
+export const pageQuery = graphql`
+  query About {
+    about: markdownRemark(
+      fileAbsolutePath: { regex: "/content/about/" }
+      frontmatter: { title: { eq: "Me" } }
+    ) {
+      html
+    }
+  }
+`;

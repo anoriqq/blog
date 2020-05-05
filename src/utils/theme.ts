@@ -25,11 +25,11 @@ export interface Palette {
 export const palette = {
   darkBase: '0,0,0',
   darkMain: '255,255,255',
-  darkAccent: '79, 249, 255',
+  darkAccent: '0, 122, 204',
 
   lightBase: '255,255,255',
   lightMain: '0,0,0',
-  lightAccent: '79, 249, 255',
+  lightAccent: '0, 122, 204',
 } as const;
 
 export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
@@ -49,6 +49,16 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
 
   a {
     color: rgb(${props => props.theme.global.link});
+  }
+
+  a.anchor.before {
+    box-shadow: none;
+    color: rgba(${props => props.theme.global.color}, 0.5);
+
+    :hover {
+      color: rgba(${props => props.theme.global.color}, 0.7);
+      text-decoration: underline;
+    }
   }
 `;
 

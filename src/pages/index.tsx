@@ -1,14 +1,14 @@
 'use strict';
 
-import React from "react"
-import { Link, graphql, PageRendererProps } from "gatsby"
+import React from 'react';
+import { Link, graphql, PageRendererProps } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
 
-import { BlogIndexQuery } from '../../@types/graphql-types'
+import { BlogIndexQuery } from '../../@types/graphql-types';
 
 interface IBlogIndexProps {
   data: BlogIndexQuery;
@@ -25,6 +25,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
       <Bio />
       {posts.map(({ node }) => {
         const title = node?.frontmatter?.title || node?.fields?.slug;
+        const path = node.fields.slug.match(/(\/[^\/]*)\/$/)[1] ?? '';
         return (
           <article key={node?.fields?.slug ?? undefined}>
             <header>
@@ -33,7 +34,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node?.fields?.slug ?? ''}>
+                <Link style={{ boxShadow: `none` }} to={path}>
                   {title}
                 </Link>
               </h3>
@@ -53,7 +54,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
   );
 };
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query BlogIndex {
@@ -62,7 +63,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt
@@ -78,4 +82,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
