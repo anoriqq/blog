@@ -25,6 +25,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
       <Bio />
       {posts.map(({ node }) => {
         const title = node?.frontmatter?.title || node?.fields?.slug;
+        const path = node.fields.slug.match(/(\/[^\/]*)\/$/)[1] ?? '';
         return (
           <article key={node?.fields?.slug ?? undefined}>
             <header>
@@ -33,7 +34,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node?.fields?.slug ?? ''}>
+                <Link style={{ boxShadow: `none` }} to={path}>
                   {title}
                 </Link>
               </h3>
@@ -62,7 +63,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt
