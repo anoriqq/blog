@@ -1,14 +1,14 @@
 'use strict';
 
-import React from "react"
-import { Link, graphql, PageRendererProps } from "gatsby"
+import React from 'react';
+import { Link, graphql, PageRendererProps } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
 
-import { BlogIndexQuery } from '../../@types/graphql-types'
+import { BlogIndexQuery } from '../../@types/graphql-types';
 
 interface IBlogIndexProps {
   data: BlogIndexQuery;
@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
   );
 };
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query BlogIndex {
@@ -82,4 +82,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

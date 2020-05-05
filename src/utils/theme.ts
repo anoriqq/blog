@@ -50,6 +50,16 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   a {
     color: rgb(${props => props.theme.global.link});
   }
+
+  a.anchor.before {
+    box-shadow: none;
+    color: rgba(${props => props.theme.global.color}, 0.5);
+
+    :hover {
+      color: rgba(${props => props.theme.global.color}, 0.7);
+      text-decoration: underline;
+    }
+  }
 `;
 
 const baseTheme = {
