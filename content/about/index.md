@@ -26,31 +26,31 @@ Web Application Engineer Intern
 
 説明文はあとでもう一度考えて書き直します。
 
-### Windowsで初音ミクのカーソルをセットアップするスクリプト ©夜夢(よるむ),★
+### Windows で初音ミクのカーソルをセットアップするスクリプト © 夜夢(よるむ),★
 
 [repository](https://github.com/anoriqq/miku-cursor)
 
 僕はスクリプトを書いただけ。イラストレーターさんに感謝。
 
-### キーワードに関連するニュースを教えてくれるLINE Bot
+### キーワードに関連するニュースを教えてくれる LINE Bot
 
 [repository](https://github.com/anoriqq/line-news-bot-heroku)
 
-### YouTube Liveのコメントを取得してNiconico風に表示するアプリ
+### YouTube Live のコメントを取得して Niconico 風に表示するアプリ
 
 [repository](https://github.com/anoriqq/products/tree/master/packages/youtube-comments)
 
-### 進捗がダメそうなときにアラートしてくれるVSCode拡張機能
+### 進捗がダメそうなときにアラートしてくれる VSCode 拡張機能
 
 [repository](https://github.com/anoriqq/code-accelerator)
 [marketplace](https://marketplace.visualstudio.com/items?itemName=anoriqq.code-accelerator)
 [presentation slide](https://docs.google.com/presentation/d/e/2PACX-1vRDZeQSd2Kwr7h5wMjW45D56hgG7VXjoPlVCs29HAJ-4q4LYRH81WHPXYr1JS-RXUTCNQo4EYTd8bnD/pub?start=false&loop=false)
 
-### Discord ラジオBot
+### Discord ラジオ Bot
 
 [repository](https://github.com/anoriqq/u20-radio-bot)
 
-### Discord しりとりBot
+### Discord しりとり Bot
 
 [repository](https://github.com/anoriqq/u20-shiritori-bot-nodejs)
 
