@@ -74,5 +74,15 @@
     "lint-staged": "10.2.2",
     "prettier": "2.0.5"
   },
-  "private": true
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,css,md}": [
+      "prettier --write"
+    ]
+  }
 }
