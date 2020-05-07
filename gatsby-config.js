@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 require('ts-node').register({ files: true });
 
 module.exports = {
@@ -151,6 +153,12 @@ module.exports = {
       options: {
         dark: require(`${__dirname}/src/utils/theme.ts`).darkTheme,
         light: require(`${__dirname}/src/utils/theme.ts`).lightTheme,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.(js|jsx|json|ts|tsx)$/,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

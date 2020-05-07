@@ -1,5 +1,3 @@
-'use strict';
-
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 export interface Theme extends DefaultTheme {
@@ -12,16 +10,6 @@ export interface Theme extends DefaultTheme {
   palette: Palette;
 }
 
-export interface Palette {
-  darkBase: typeof palette.darkBase | string;
-  darkMain: typeof palette.darkMain | string;
-  darkAccent: typeof palette.darkAccent | string;
-
-  lightBase: typeof palette.lightBase | string;
-  lightMain: typeof palette.lightMain | string;
-  lightAccent: typeof palette.lightAccent | string;
-}
-
 export const palette = {
   darkBase: '0,0,0',
   darkMain: '255,255,255',
@@ -31,6 +19,16 @@ export const palette = {
   lightMain: '0,0,0',
   lightAccent: '0, 122, 204',
 } as const;
+
+export interface Palette {
+  darkBase: typeof palette.darkBase | string;
+  darkMain: typeof palette.darkMain | string;
+  darkAccent: typeof palette.darkAccent | string;
+
+  lightBase: typeof palette.lightBase | string;
+  lightMain: typeof palette.lightMain | string;
+  lightAccent: typeof palette.lightAccent | string;
+}
 
 export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   html, body {

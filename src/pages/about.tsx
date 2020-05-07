@@ -1,11 +1,9 @@
-'use strict';
-
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
 import { GlobalStyles, Theme } from '../utils/theme';
-import { default as SEO } from '../components/seo';
+import SEO from '../components/seo';
 import { AboutQuery } from '../../@types/graphql-types';
 
 const Container = styled.div`
@@ -23,7 +21,7 @@ interface Props {
 }
 
 export default ({ data, theme }: Props) => (
-  <React.Fragment>
+  <>
     <SEO title="About Me" />
     <GlobalStyles theme={theme} />
     <Container>
@@ -31,7 +29,7 @@ export default ({ data, theme }: Props) => (
         dangerouslySetInnerHTML={{ __html: data.about?.html ?? 'No content' }}
       />
     </Container>
-  </React.Fragment>
+  </>
 );
 
 export const pageQuery = graphql`

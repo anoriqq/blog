@@ -1,14 +1,20 @@
-'use strict';
-
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
+import {
+  BlogPostBySlugQuery,
+  SitePageContext,
+} from '../../@types/graphql-types';
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({
+  data,
+  pageContext,
+  location,
+}: PageProps<BlogPostBySlugQuery, SitePageContext>) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
@@ -63,14 +69,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                {`← ${previous.frontmatter.title}`}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {`${next.frontmatter.title} →`}
               </Link>
             )}
           </li>

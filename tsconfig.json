@@ -13,7 +13,7 @@
     "typeRoots": ["./node_modules/@types", "./@types"],
     "baseUrl": ".",
     "paths": {
-      "*": ["*"]
+      "@typings/*": ["@types/*"]
     },
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

@@ -1,16 +1,16 @@
-'use strict';
+/* eslint-disable */
 
 import { Node } from 'unist';
-import { default as visit } from 'unist-util-visit';
-import { default as toString } from 'mdast-util-to-string';
+import visit from 'unist-util-visit';
+import toString from 'mdast-util-to-string';
 
 interface INode extends Node {
   depth: number;
 }
 
-export default ({ markdownAST }, pluginOptions) => {
+export default ({ markdownAST }) => {
   visit<INode>(markdownAST, 'heading', node => {
-    let { depth } = node;
+    const { depth } = node;
     const text = toString(node);
     const html = `
       <h${depth} id="${text}">

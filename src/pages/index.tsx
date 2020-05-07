@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { Link, graphql, PageRendererProps } from 'gatsby';
 
@@ -10,12 +8,12 @@ import { rhythm } from '../utils/typography';
 
 import { BlogIndexQuery } from '../../@types/graphql-types';
 
-interface IBlogIndexProps {
+interface Props {
   data: BlogIndexQuery;
   location: PageRendererProps['location'];
 }
 
-const BlogIndex = ({ data, location }: IBlogIndexProps) => {
+const BlogIndex = ({ data, location }: Props) => {
   const siteTitle = data?.site?.siteMetadata?.title;
   const posts = data.allMarkdownRemark.edges;
 
@@ -25,7 +23,7 @@ const BlogIndex = ({ data, location }: IBlogIndexProps) => {
       <Bio />
       {posts.map(({ node }) => {
         const title = node?.frontmatter?.title || node?.fields?.slug;
-        const path = node.fields.slug.match(/(\/[^\/]*)\/$/)[1] ?? '';
+        const path = node.fields.slug.match(/(\/[^/]*)\/$/)[1] ?? '';
         return (
           <article key={node?.fields?.slug ?? undefined}>
             <header>
