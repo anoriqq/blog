@@ -19,7 +19,7 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx,.css './src/**'",
+    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src",
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
@@ -95,10 +95,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,md}": [
+    "*.{js,jsx,ts,tsx,md}": [
       "eslint --fix --ignore-pattern '!.eslintrc.js'"
     ],
-    "*.json": [
+    "*.{json,css}": [
       "prettier --write"
     ],
     "package.json": [

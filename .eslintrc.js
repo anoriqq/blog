@@ -8,6 +8,14 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
   ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   rules: {
     'import/extensions': [
       'error',
@@ -20,5 +28,12 @@ module.exports = {
         mjs: 'never',
       },
     ],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
+    '@typescript-eslint/explicit-function-return-type': 0,
+    'no-underscore-dangle': ['error', { allow: ['__PATH_PREFIX__'] }],
+    'react/prop-types': 0,
   },
 };
