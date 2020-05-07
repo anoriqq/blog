@@ -95,10 +95,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix --ignore-pattern '!/.eslintrc.js' --ignore-pattern '/@types/graphql-types.d.ts'"
     ],
-    "*.{json,css}": [
+    "*.{json,css,md}": [
       "prettier --write"
     ],
     "package.json": [
