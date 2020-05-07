@@ -155,6 +155,12 @@ module.exports = {
         light: require(`${__dirname}/src/utils/theme.ts`).lightTheme,
       },
     },
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.(js|jsx|json|ts|tsx|css)$/,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
