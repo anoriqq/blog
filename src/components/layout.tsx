@@ -1,7 +1,5 @@
-'use strict';
-
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { FunctionComponent } from 'react';
+import { Link, PageRendererProps } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 
@@ -9,7 +7,12 @@ declare global {
   const __PATH_PREFIX__: string;
 }
 
-const Layout = ({ location, title, children }) => {
+interface Props {
+  location: PageRendererProps['location'];
+  title?: string;
+}
+
+const Layout: FunctionComponent<Props> = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
@@ -27,7 +30,7 @@ const Layout = ({ location, title, children }) => {
             boxShadow: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to="/"
         >
           {title}
         </Link>
@@ -46,7 +49,7 @@ const Layout = ({ location, title, children }) => {
             boxShadow: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to="/"
         >
           {title}
         </Link>
@@ -65,7 +68,7 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        {`© ${new Date().getFullYear()}, Built with`}
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>

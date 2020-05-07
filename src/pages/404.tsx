@@ -1,12 +1,16 @@
-'use strict';
-
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, PageRendererProps } from 'gatsby';
 
+import { NotFoundPageQuery } from '@typings/graphql-types';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const NotFoundPage = ({ data, location }) => {
+interface Props {
+  data: NotFoundPageQuery;
+  location: PageRendererProps['location'];
+}
+
+const NotFoundPage = ({ data, location }: Props) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
@@ -21,7 +25,7 @@ const NotFoundPage = ({ data, location }) => {
 export default NotFoundPage;
 
 export const pageQuery = graphql`
-  query {
+  query NotFoundPage {
     site {
       siteMetadata {
         title

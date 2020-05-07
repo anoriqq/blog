@@ -3136,10 +3136,10 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<(
       & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };
 
-export type Unnamed_2_QueryVariables = {};
+export type NotFoundPageQueryVariables = {};
 
 
-export type Unnamed_2_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+export type NotFoundPageQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 export type AboutQueryVariables = {};
 

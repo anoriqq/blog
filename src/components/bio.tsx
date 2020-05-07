@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component
@@ -60,9 +58,11 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
+        Written by
+        <strong>{author.name}</strong>
+        {author.summary}
         {` `}
-        <Link to={`/about`}>About</Link>
+        <Link to="/about">About</Link>
         {` `}
         <a href={`https://github.com/${social.github}`}>GitHub</a>
         {` `}
