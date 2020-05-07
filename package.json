@@ -1,21 +1,19 @@
 {
+  "private": true,
   "name": "portfolio",
-  "version": "0.1.0",
   "description": "anoriqq's portfolio blog",
-  "keywords": [
-    "gatsby"
-  ],
-  "homepage": "https://github.com/anoriqq/portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/anoriqq/portfolio/issues"
-  },
   "license": "MIT",
   "author": "anoriqq <shota.yoshikawa@anoriqq.com>",
-  "main": "n/a",
+  "homepage": "https://github.com/anoriqq/portfolio#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anoriqq/portfolio.git"
   },
+  "bugs": {
+    "url": "https://github.com/anoriqq/portfolio/issues"
+  },
+  "version": "0.1.0",
+  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
@@ -70,7 +68,25 @@
     "@types/react-helmet": "5.0.15",
     "@types/styled-components": "5.1.0",
     "@types/vfile-message": "2.0.0",
-    "prettier": "2.0.5"
+    "husky": "4.2.5",
+    "lint-staged": "10.2.2",
+    "prettier": "2.0.5",
+    "prettier-package-json": "2.1.3"
   },
-  "private": true
+  "keywords": [
+    "gatsby"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,css,md}": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier-package-json --write"
+    ]
+  }
 }
