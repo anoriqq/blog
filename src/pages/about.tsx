@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
 import { GlobalStyles, Theme } from '../utils/theme';
-import SEO from '../components/seo';
+import { Seo } from '../components/seo';
 import { AboutQuery } from '../../@types/graphql-types';
 
 const Container = styled.div`
@@ -22,7 +22,7 @@ interface Props {
 
 export default ({ data, theme }: Props) => (
   <>
-    <SEO title="About Me" />
+    <Seo title="About Me" />
     <GlobalStyles theme={theme} />
     <Container>
       <section

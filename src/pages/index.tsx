@@ -3,7 +3,7 @@ import { Link, graphql, PageRendererProps } from 'gatsby';
 
 import { Bio } from '../components/bio';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { Seo } from '../components/seo';
 import { rhythm } from '../utils/typography';
 
 import { BlogIndexQuery } from '../../@types/graphql-types';
@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }: Props) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <Seo title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
         const title = node?.frontmatter?.title || node?.fields?.slug;
