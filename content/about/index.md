@@ -5,7 +5,7 @@ title: Me
 # anoriqq (Shota Yoshikawa)
 
 Tokyo, Japan  
-料理をしたり、筋トレしたり、TypeScript を書いたりする  
+料理をしたり、筋トレしたり、TypeScript を書いたりする。GCP 廃課金勢
 [GitHub](https://github.com/anoriqq)
 [Blog](/)
 [Twitter](https://twitter.com/anoriqq)
