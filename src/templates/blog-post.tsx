@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 
+import { BlogPostBySlugQuery, SitePageContext } from '@typings/graphql-types';
 import { Bio } from '../components/bio';
 import Layout from '../components/layout';
 import { Seo } from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
-import {
-  BlogPostBySlugQuery,
-  SitePageContext,
-} from '../../@types/graphql-types';
 
 const BlogPostTemplate = ({
   data,

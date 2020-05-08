@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, graphql, PageRendererProps } from 'gatsby';
 
+import { BlogIndexQuery } from '@typings/graphql-types';
 import { Bio } from '../components/bio';
 import Layout from '../components/layout';
 import { Seo } from '../components/seo';
 import { rhythm } from '../utils/typography';
-
-import { BlogIndexQuery } from '../../@types/graphql-types';
 
 interface Props {
   data: BlogIndexQuery;

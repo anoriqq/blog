@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
+import { AboutQuery } from '@typings/graphql-types';
 import { GlobalStyles, Theme } from '../utils/theme';
 import { Seo } from '../components/seo';
-import { AboutQuery } from '../../@types/graphql-types';
 
 const Container = styled.div`
   margin: 3rem auto;
