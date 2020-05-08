@@ -1,13 +1,8 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React, { FunctionComponent } from 'react';
 import { Helmet, HelmetProps } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
+
+import { SeoQuery } from '@typings/graphql-types';
 
 interface Props {
   description?: string;
@@ -16,30 +11,17 @@ interface Props {
   meta?: HelmetProps['meta'];
 }
 
-const defaultProps: Props = {
-  lang: 'ja',
-  meta: [],
-  description: '',
-};
+interface PureProps extends Props {
+  site: SeoQuery['site'];
+}
 
-const SEO: FunctionComponent<Props> = (props?) => {
-  const { description, title, lang, meta } = { ...defaultProps, ...props };
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            social {
-              twitter
-            }
-          }
-        }
-      }
-    `
-  );
-
+export const PureSeo: FunctionComponent<PureProps> = ({
+  description = '',
+  title,
+  lang = 'ja',
+  meta = [],
+  site,
+}) => {
   const metaDescription = description || site.siteMetadata.description;
   const defaultMeta: HelmetProps['meta'] = [
     {
@@ -88,4 +70,34 @@ const SEO: FunctionComponent<Props> = (props?) => {
   );
 };
 
-export default SEO;
+export const Seo: FunctionComponent<Props> = ({
+  description,
+  title,
+  lang,
+  meta,
+}) => (
+  <StaticQuery
+    query={graphql`
+      query Seo {
+        site {
+          siteMetadata {
+            title
+            description
+            social {
+              twitter
+            }
+          }
+        }
+      }
+    `}
+    render={({ site }: SeoQuery) => (
+      <PureSeo
+        description={description}
+        title={title}
+        lang={lang}
+        meta={meta}
+        site={site}
+      />
+    )}
+  />
+);

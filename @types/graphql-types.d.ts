@@ -3128,10 +3128,10 @@ export type BioQueryQueryVariables = {};
 
 export type BioQueryQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<SiteSiteMetadataAuthor, 'name' | 'summary'>>, social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter' | 'github'>> }> }> };
 
-export type Unnamed_1_QueryVariables = {};
+export type SeoQueryVariables = {};
 
 
-export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<(
+export type SeoQuery = { site?: Maybe<{ siteMetadata?: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description'>
       & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };

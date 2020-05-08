@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 
-import Bio from '../components/bio';
+import { BlogPostBySlugQuery, SitePageContext } from '@typings/graphql-types';
+import { Bio } from '../components/bio';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { Seo } from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
-import {
-  BlogPostBySlugQuery,
-  SitePageContext,
-} from '../../@types/graphql-types';
 
 const BlogPostTemplate = ({
   data,
@@ -21,7 +18,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -45,7 +42,10 @@ const BlogPostTemplate = ({
             {`${post.timeToRead}min ${post.frontmatter.date}`}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),

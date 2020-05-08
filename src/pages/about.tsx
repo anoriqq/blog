@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
+import { AboutQuery } from '@typings/graphql-types';
 import { GlobalStyles, Theme } from '../utils/theme';
-import SEO from '../components/seo';
-import { AboutQuery } from '../../@types/graphql-types';
+import { Seo } from '../components/seo';
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -22,10 +22,11 @@ interface Props {
 
 export default ({ data, theme }: Props) => (
   <>
-    <SEO title="About Me" />
+    <Seo title="About Me" />
     <GlobalStyles theme={theme} />
     <Container>
       <section
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: data.about?.html ?? 'No content' }}
       />
     </Container>
