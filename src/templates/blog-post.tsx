@@ -42,7 +42,7 @@ const BlogPostTemplate = ({
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {`${post.timeToRead}min ${post.frontmatter.date}`}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -107,9 +107,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
       }
+      timeToRead
     }
   }
 `;
