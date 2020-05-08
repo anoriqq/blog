@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly of location at "/" 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "maxWidth": "42rem",
+      "padding": "2.625rem 1.3125rem",
+    }
+  }
+>
+  <header>
+    <h3
+      style={
+        Object {
+          "fontFamily": "Montserrat, sans-serif",
+          "marginTop": 0,
+        }
+      }
+    >
+      <a
+        href="/"
+        style={
+          Object {
+            "boxShadow": "none",
+            "color": "inherit",
+          }
+        }
+      >
+        All posts
+      </a>
+    </h3>
+  </header>
+  <main>
+    <div>
+      Hello World
+    </div>
+  </main>
+  <footer>
+    © 2020, Built with
+     
+    <a
+      href="https://www.gatsbyjs.org"
+    >
+      Gatsby
+    </a>
+  </footer>
+</div>
+`;
+
+exports[`Layout renders correctly of location at "hello-world" 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "maxWidth": "42rem",
+      "padding": "2.625rem 1.3125rem",
+    }
+  }
+>
+  <header>
+    <h3
+      style={
+        Object {
+          "fontFamily": "Montserrat, sans-serif",
+          "marginTop": 0,
+        }
+      }
+    >
+      <a
+        href="/"
+        style={
+          Object {
+            "boxShadow": "none",
+            "color": "inherit",
+          }
+        }
+      >
+        All posts
+      </a>
+    </h3>
+  </header>
+  <main>
+    <div>
+      Hello World
+    </div>
+  </main>
+  <footer>
+    © 2020, Built with
+     
+    <a
+      href="https://www.gatsbyjs.org"
+    >
+      Gatsby
+    </a>
+  </footer>
+</div>
+`;
