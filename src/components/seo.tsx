@@ -12,7 +12,7 @@ interface Props {
 }
 
 interface PureProps extends Props {
-  site?: SeoQuery['site'];
+  site: SeoQuery['site'];
 }
 
 export const PureSeo: FunctionComponent<PureProps> = ({
