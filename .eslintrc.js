@@ -9,6 +9,7 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
   ],
   settings: {
     'import/parsers': {
