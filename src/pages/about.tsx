@@ -26,6 +26,7 @@ export default ({ data, theme }: Props) => (
     <GlobalStyles theme={theme} />
     <Container>
       <section
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: data.about?.html ?? 'No content' }}
       />
     </Container>

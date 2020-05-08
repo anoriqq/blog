@@ -45,7 +45,10 @@ const BlogPostTemplate = ({
             {`${post.timeToRead}min ${post.frontmatter.date}`}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),

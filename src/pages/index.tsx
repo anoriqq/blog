@@ -42,6 +42,7 @@ const BlogIndex = ({ data, location }: Props) => {
             </header>
             <section>
               <p
+                // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
                   __html: node?.frontmatter?.description || node.excerpt || '',
                 }}
