@@ -22,7 +22,7 @@
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src ./plugins",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
