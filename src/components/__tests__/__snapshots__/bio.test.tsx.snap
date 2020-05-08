@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bio renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "marginBottom": "4.375rem",
+    }
+  }
+>
+  <div
+    className=" gatsby-image-wrapper"
+    style={
+      Object {
+        "borderRadius": "100%",
+        "display": "inline-block",
+        "height": 50,
+        "marginBottom": 0,
+        "marginRight": "0.875rem",
+        "minWidth": 50,
+        "overflow": "hidden",
+        "position": "relative",
+        "width": 50,
+      }
+    }
+  >
+    <img
+      alt=""
+      aria-hidden={true}
+      src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAECAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAe/GFztRNAUH/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQESD/2gAIAQEAAQUCLhiz/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQMBAT8BY//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABoQAQABBQAAAAAAAAAAAAAAABEAARAgITH/2gAIAQEAAT8hry5mokx//9oADAMBAAIAAwAAABBEzwD/xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAwEBPxBQx//EABYRAQEBAAAAAAAAAAAAAAAAAAEgIf/aAAgBAgEBPxAMj//EABwQAQABBAMAAAAAAAAAAAAAAAEhABFBYRAgMf/aAAgBAQABPxBIkLtEpgib54Cyaq5gdnnX/9k="
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "left": 0,
+          "objectFit": "cover",
+          "objectPosition": "center",
+          "opacity": 1,
+          "position": "absolute",
+          "top": 0,
+          "transitionDelay": "500ms",
+          "width": "100%",
+        }
+      }
+    />
+    <picture>
+      <source
+        srcSet="/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg 1x,
+/static/897dc7abe19cc42b831a745c4a64d44d/aba1d/profile-pic.jpg 1.5x,
+/static/897dc7abe19cc42b831a745c4a64d44d/b315d/profile-pic.jpg 2x"
+      />
+      <img
+        alt="anoriqq"
+        height={50}
+        loading="lazy"
+        onLoad={[Function]}
+        src="/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg"
+        srcSet="/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg 1x,
+/static/897dc7abe19cc42b831a745c4a64d44d/aba1d/profile-pic.jpg 1.5x,
+/static/897dc7abe19cc42b831a745c4a64d44d/b315d/profile-pic.jpg 2x"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "height": "100%",
+            "left": 0,
+            "objectFit": "cover",
+            "objectPosition": "center",
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "transition": "opacity 500ms",
+            "width": "100%",
+          }
+        }
+        width={50}
+      />
+    </picture>
+    <noscript
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<picture><source srcset=\\"/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg 1x,
+/static/897dc7abe19cc42b831a745c4a64d44d/aba1d/profile-pic.jpg 1.5x,
+/static/897dc7abe19cc42b831a745c4a64d44d/b315d/profile-pic.jpg 2x\\" /><img loading=\\"lazy\\" width=\\"50\\" height=\\"50\\" srcset=\\"/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg 1x,
+/static/897dc7abe19cc42b831a745c4a64d44d/aba1d/profile-pic.jpg 1.5x,
+/static/897dc7abe19cc42b831a745c4a64d44d/b315d/profile-pic.jpg 2x\\" src=\\"/static/897dc7abe19cc42b831a745c4a64d44d/99438/profile-pic.jpg\\" alt=\\"anoriqq\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+        }
+      }
+    />
+  </div>
+  <p>
+    Written by
+    <strong>
+       anoriqq 
+    </strong>
+    Web app developer in Tokyo. Interested in Node.js and TypeScript.
+     
+    <a
+      href="/about"
+    >
+      About
+    </a>
+     
+    <a
+      href="https://github.com/anoriqq"
+    >
+      GitHub
+    </a>
+     
+    <a
+      href="https://twitter.com/anoriqq"
+    >
+      Twitter
+    </a>
+  </p>
+</div>
+`;
