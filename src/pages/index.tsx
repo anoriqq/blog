@@ -36,6 +36,8 @@ const BlogIndex = ({ data, location }: Props) => {
                   {title}
                 </Link>
               </h3>
+              <small>{`${node?.timeToRead}min`}</small>
+              {` `}
               <small>{node?.frontmatter?.date}</small>
             </header>
             <section>
@@ -76,6 +78,7 @@ export const pageQuery = graphql`
             title
             description
           }
+          timeToRead
         }
       }
     }
