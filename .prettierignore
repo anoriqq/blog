@@ -3,3 +3,4 @@ package.json
 package-lock.json
 public
 @types/graphql-types.d.ts
+coverage
