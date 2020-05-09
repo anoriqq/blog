@@ -2157,6 +2157,7 @@ export type SiteFieldsEnum =
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___social___twitter'
   | 'siteMetadata___social___github'
+  | 'siteMetadata___social___qiita'
   | 'port'
   | 'host'
   | 'polyfill'
@@ -3098,11 +3099,13 @@ export type SiteSiteMetadataFilterInput = {
 export type SiteSiteMetadataSocial = {
   twitter?: Maybe<Scalars['String']>;
   github?: Maybe<Scalars['String']>;
+  qiita?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataSocialFilterInput = {
   twitter?: Maybe<StringQueryOperatorInput>;
   github?: Maybe<StringQueryOperatorInput>;
+  qiita?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -3123,10 +3126,10 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type BioQueryQueryVariables = {};
+export type BioQueryVariables = {};
 
 
-export type BioQueryQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<SiteSiteMetadataAuthor, 'name' | 'summary'>>, social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter' | 'github'>> }> }> };
+export type BioQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<SiteSiteMetadataAuthor, 'name' | 'summary'>>, social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter' | 'github' | 'qiita'>> }> }> };
 
 export type SeoQueryVariables = {};
 

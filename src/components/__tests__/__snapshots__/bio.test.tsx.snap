@@ -112,6 +112,12 @@ exports[`Bio renders correctly 1`] = `
     >
       Twitter
     </a>
+     
+    <a
+      href="https://qiita.com/anoriqq"
+    >
+      Qiita
+    </a>
   </p>
 </div>
 `;

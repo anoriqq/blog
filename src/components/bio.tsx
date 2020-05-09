@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
 
+import { BioQuery } from '@typings/graphql-types';
 import { rhythm } from '../utils/typography';
 
-export const PureBio = ({ data }) => (
+interface PureProps {
+  data: BioQuery;
+}
+
+export const PureBio: FunctionComponent<PureProps> = ({ data }) => (
   <div
     style={{
       display: `flex`,
@@ -38,14 +43,18 @@ export const PureBio = ({ data }) => (
       <a href={`https://twitter.com/${data.site.siteMetadata.social.twitter}`}>
         Twitter
       </a>
+      {` `}
+      <a href={`https://qiita.com/${data.site.siteMetadata.social.qiita}`}>
+        Qiita
+      </a>
     </p>
   </div>
 );
 
-export const Bio = () => (
+export const Bio: FunctionComponent = () => (
   <StaticQuery
     query={graphql`
-      query BioQuery {
+      query Bio {
         avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
           childImageSharp {
             fixed(width: 50, height: 50) {
@@ -62,11 +71,12 @@ export const Bio = () => (
             social {
               twitter
               github
+              qiita
             }
           }
         }
       }
     `}
-    render={data => <PureBio data={data} />}
+    render={(data: BioQuery) => <PureBio data={data} />}
   />
 );
