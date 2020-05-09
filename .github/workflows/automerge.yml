@@ -27,5 +27,5 @@ jobs:
         uses: "pascalgn/automerge-action@aa39e02762e637db5f5ff81c6ef2a720bafef418"
         env:
           GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          MERGE_COMMIT_MESSAGE: "Auto merge pull request #{pullRequest.number}"
+          MERGE_COMMIT_MESSAGE: "Auto merge pull request #{pullRequest.number} {pullRequest.title}"
           MERGE_DELETE_BRANCH: true
