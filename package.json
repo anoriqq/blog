@@ -22,7 +22,8 @@
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src ./plugins",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "jest",
+    "test": "jest --colors",
+    "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
