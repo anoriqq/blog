@@ -16,6 +16,11 @@ module.exports = {
     'plugin:jest-dom/recommended',
     'plugin:testing-library/react',
   ],
+  overrides: [
+    {
+      files: ['*.{ts,tsx,js,jsx}'],
+    },
+  ],
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
