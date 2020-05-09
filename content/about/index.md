@@ -9,6 +9,7 @@ Tokyo, Japan
 [GitHub](https://github.com/anoriqq)
 [Blog](/)
 [Twitter](https://twitter.com/anoriqq)
+[Qiita](https://qiita.com/anoriqq)
 [Email](mailto:shota.yoshikawa@anoriqq.com)
 
 ## Work

@@ -14,6 +14,7 @@ module.exports = {
     social: {
       twitter: `anoriqq`,
       github: `anoriqq`,
+      qiita: `anoriqq`,
     },
   },
   plugins: [
