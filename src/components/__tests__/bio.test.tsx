@@ -30,6 +30,7 @@ describe('Bio', () => {
           social: {
             twitter: 'anoriqq',
             github: 'anoriqq',
+            qiita: 'anoriqq',
           },
         },
       },
