@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import { Link, PageRendererProps } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
@@ -12,7 +12,7 @@ interface Props {
   title?: string;
 }
 
-const Layout: FunctionComponent<Props> = ({ location, title, children }) => {
+const Layout: React.FC<Props> = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 

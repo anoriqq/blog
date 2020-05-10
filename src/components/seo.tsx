@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import { Helmet, HelmetProps } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -15,7 +15,7 @@ interface PureProps extends Props {
   site: SeoQuery['site'];
 }
 
-export const PureSeo: FunctionComponent<PureProps> = ({
+export const PureSeo: React.FC<PureProps> = ({
   description = '',
   title,
   lang = 'ja',
@@ -70,12 +70,7 @@ export const PureSeo: FunctionComponent<PureProps> = ({
   );
 };
 
-export const Seo: FunctionComponent<Props> = ({
-  description,
-  title,
-  lang,
-  meta,
-}) => (
+export const Seo: React.FC<Props> = ({ description, title, lang, meta }) => (
   <StaticQuery
     query={graphql`
       query Seo {
