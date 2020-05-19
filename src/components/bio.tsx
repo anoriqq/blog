@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -9,7 +9,7 @@ interface PureProps {
   data: BioQuery;
 }
 
-export const PureBio: FunctionComponent<PureProps> = ({ data }) => (
+export const PureBio: React.FC<PureProps> = ({ data }) => (
   <div
     style={{
       display: `flex`,
@@ -51,7 +51,7 @@ export const PureBio: FunctionComponent<PureProps> = ({ data }) => (
   </div>
 );
 
-export const Bio: FunctionComponent = () => (
+export const Bio: React.FC = () => (
   <StaticQuery
     query={graphql`
       query Bio {
