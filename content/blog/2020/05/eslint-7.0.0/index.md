@@ -1,6 +1,7 @@
 ---
 title: ESLint v7.0.0の変更点
 date: '2020-05-08T22:49:59Z'
+tags: ['ESLint', 'JavaScript']
 ---
 
 ## ESLint v7.0.0 の新機能

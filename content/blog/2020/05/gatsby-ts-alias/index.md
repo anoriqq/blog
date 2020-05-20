@@ -2,6 +2,7 @@
 title: TypeScriptでGatsby.jsを書くときにモジュールのaliasに関するtscとeslint ts/importのエラーを解決する方法
 date: '2020-05-07T12:23:21Z'
 description: 'TypeScriptでGatsby.jsを書くときにモジュールのaliasに関するtscと@typescript-eslint/importのエラーを解決する方法'
+tags: ['TypeScript', 'Gatsby.js', 'ESLint', 'Error']
 ---
 
 ## やりたいこと

@@ -1,6 +1,7 @@
 ---
 title: Gatsby.jsのソースコードを読む
 date: '2020-05-20T00:04:02Z'
+tags: ['OSS', 'Gatsby', 'TypeScript']
 ---
 
 ## Gatsby.js にコントリビュートしたい

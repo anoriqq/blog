@@ -1,6 +1,7 @@
 ---
 title: GitHub Actionsから環境変数をマスクしてGAEにデプロイする
 date: '2020-05-15T04:24:10Z'
+tags: ['GAE', 'Github Actions', 'Secrets']
 ---
 
 ## GitHub Actions から環境変数をマスクして GAE にデプロイする

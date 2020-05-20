@@ -1,6 +1,7 @@
 ---
 title: Ant Designのコンポーネントの書き方が好き
 date: '2020-05-19T00:25:06Z'
+tags: ['Ant Design', 'UI Framework', 'JavaScript', 'さくっと読めるシリーズ']
 ---
 
 サクッと読めるシリーズです。
