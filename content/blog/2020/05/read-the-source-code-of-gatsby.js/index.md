@@ -70,6 +70,8 @@ monorepo なので`/packages`以下のディレクトリがパッケージとし
 ここからコード読むので手書きに移行  
 1 番左のファイルが`packages/gatsby-cli/src/index.ts`
 
+https://github.com/anoriqq/anoriqq/blob/images/gatsby-ts-pr.png?raw=true
+
 ![手書きメモ](./gatsby-ts-pr.png)
 
 見た感じいけそうだったのでコメントしてきた。  
