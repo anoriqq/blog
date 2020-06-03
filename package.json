@@ -17,7 +17,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "lint": "eslint --fix ./src ./plugins",
     "serve": "gatsby serve",
