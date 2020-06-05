@@ -1,6 +1,7 @@
 ---
 title: Adidas Trainingの6 Weeksプランを完走した感想
 date: '2020-06-02T04:35:03Z'
+tags: [health]
 ---
 
 ![congratulations](./congratulations.png)
