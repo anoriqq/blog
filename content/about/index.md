@@ -32,6 +32,21 @@ Web Application Engineer Intern
 
 0 歩目の克服と、1 歩目の克服を明確に決心する大切な経験をここで得た。
 
+## Talks
+
+### VSCode 拡張を雑につくる - Ginza.js
+
+[Slide](https://docs.google.com/presentation/d/e/2PACX-1vRDZeQSd2Kwr7h5wMjW45D56hgG7VXjoPlVCs29HAJ-4q4LYRH81WHPXYr1JS-RXUTCNQo4EYTd8bnD/pub?start=false&loop=false)
+
+VSCode の拡張機能は簡単に作れて簡単に公開できます、というのをお伝えする LT。
+
+### Git 講座 - 非公開イベント
+
+[Slide](https://anoriqq.github.io/github-slide)
+
+Git のことを理解してほしいという思いで準備、講師をやらせていただいた。  
+未経験者向けにお願いされたので、僕が未経験の頃に知りたかったことを主軸にした発表。
+
 ## Open Source Projects
 
 僕はライブ映像を観ると涙が出てくるくらいには初音ミクが好きで、どうしてなのかと考えるとそれは｢世界中の人々が VOCALOID という存在を取り巻く世界観を作り愛し熱狂している｣からなんだと思ったことがある。  
