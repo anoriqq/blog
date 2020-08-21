@@ -109,6 +109,18 @@ Gin(Go)と React(TypeScript)の週末プロジェクト。
 
 ゲーミフィケーションにはまって個人的に毎日使っている。
 
+### A9TD4 - 4bit RISC CPU
+
+[anoriqq/A9TD4](https://github.com/anoriqq/A9TD4)
+
+[『CPU の創りかた』 | マイナビブックス](https://book.mynavi.jp/ec/products/detail/id=22065)を元にいくつかのアレンジを加えた 4bit CPU をつくるプロジェクト。
+
+コンピューターの基礎的な勉強が動機だが、その他物理的な電気の勉強や、基板設計等も同時に学ぶことができた。
+
+ソフトウェア製作と違い物理的制約が多いが、その制約を超えるためのコンピューター理論を完成させる、ある意味"意地"のようなものを感じて感動した。
+
+また、単純に自分の手でモノをつくる感覚はとても楽しい。
+
 ### GCE をお手軽に使い捨てることができるサービス
 
 [anoriqq/disposable](https://github.com/anoriqq/disposable)
