@@ -113,7 +113,7 @@ Gin(Go)と React(TypeScript)の週末プロジェクト。
 
 [anoriqq/A9TD4](https://github.com/anoriqq/A9TD4)
 
-[｢CPU の創りかた｣ | マイナビブックス](https://book.mynavi.jp/ec/products/detail/id=22065)を元にいくつかのアレンジを加えた 4bit CPU をつくるプロジェクト。
+[『CPU の創りかた』 | マイナビブックス](https://book.mynavi.jp/ec/products/detail/id=22065)を元にいくつかのアレンジを加えた 4bit CPU をつくるプロジェクト。
 
 コンピューターの基礎的な勉強が動機だが、その他物理的な電気の勉強や、基板設計等も同時に学ぶことができた。
 
