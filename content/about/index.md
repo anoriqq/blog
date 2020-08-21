@@ -100,6 +100,15 @@ Twitter で PR 募集しているのを見かけて参加を決心した。
 やりたいことが際限なく出てきてしまうタイプなので、現状でも外に出す決断をするのにエネルギー使う。  
 このバランスが取れる状態が自分の能力なんだなと納得する良い機会になる。
 
+### ゲーミフィケーションに活用できるコイントスアプリ
+
+[anoriqq/randa](https://github.com/anoriqq/randa)
+[randa.anoriqq.com](https://randa.anoriqq.com/)
+
+Gin(Go)と React(TypeScript)の週末プロジェクト。
+
+ゲーミフィケーションにはまって個人的に毎日使っている。
+
 ### GCE をお手軽に使い捨てることができるサービス
 
 [anoriqq/disposable](https://github.com/anoriqq/disposable)
