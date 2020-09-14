@@ -1,4 +1,5 @@
 export type Maybe<T> = T | null;
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -1841,7 +1842,7 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<DateQueryOperatorInput>;
+  port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
@@ -1954,7 +1955,7 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Date']>;
+  port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
@@ -1966,14 +1967,6 @@ export type Site = Node & {
 
 
 export type SiteBuildTimeArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-
-export type SitePortArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
@@ -2265,7 +2258,7 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<DateQueryOperatorInput>;
+  port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
@@ -3159,12 +3152,12 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type BioQueryVariables = {};
+export type BioQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type BioQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<SiteSiteMetadataAuthor, 'name' | 'summary'>>, social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter' | 'github' | 'qiita'>> }> }> };
 
-export type SeoQueryVariables = {};
+export type SeoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type SeoQuery = { site?: Maybe<{ siteMetadata?: Maybe<(
@@ -3172,17 +3165,17 @@ export type SeoQuery = { site?: Maybe<{ siteMetadata?: Maybe<(
       & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };
 
-export type NotFoundPageQueryVariables = {};
+export type NotFoundPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type NotFoundPageQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
-export type AboutQueryVariables = {};
+export type AboutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type AboutQuery = { about?: Maybe<Pick<MarkdownRemark, 'html'>> };
 
-export type BlogIndexQueryVariables = {};
+export type BlogIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type BlogIndexQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { edges: Array<{ node: (
@@ -3190,9 +3183,9 @@ export type BlogIndexQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSite
         & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
       ) }> } };
 
-export type BlogPostBySlugQueryVariables = {
+export type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
-};
+}>;
 
 
 export type BlogPostBySlugQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, markdownRemark?: Maybe<(
