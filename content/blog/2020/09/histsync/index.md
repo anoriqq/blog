@@ -1,6 +1,6 @@
 ---
 title: ShellのhistoryファイルをGitで管理するスクリプトを書いた
-date: '2020-09-14T:12:53Z'
+date: '2020-09-14T13131313131313131313131313:12:53Z'
 tags: [zsh, shell, unix]
 ---
 
