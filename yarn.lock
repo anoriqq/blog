@@ -6715,10 +6715,10 @@ eslint-plugin-react@7.21.4, eslint-plugin-react@^7.20.6:
     resolve "^1.17.0"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-testing-library@3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-3.9.0.tgz#96e8a88e0f8765d375166a724b88e3a44aa72eae"
-  integrity sha512-86GULfQGAyaygbkemFmDgcTW0TUYO7mwkZMZ7lcawOkDra+iYWUHFf2Fr/QMfeFQHuc7v++G35gToJ7Vaamgow==
+eslint-plugin-testing-library@3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-3.9.1.tgz#b59d4c8d5a22f88a32b36b56c1ec2ea14cb89459"
+  integrity sha512-E7AtT0A+BiRJUdJfK92fSXn3Bm0YDUwxnsyFHu1wfLzmq/h5GHP3zuiAY6J2gvsd3QYHpf8zCHeKenchrL6fmQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^3.10.1"
 
@@ -7931,10 +7931,10 @@ gatsby-plugin-react-helmet@3.3.14:
   dependencies:
     "@babel/runtime" "^7.11.2"
 
-gatsby-plugin-sharp@2.6.41:
-  version "2.6.41"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.6.41.tgz#92036fcc877fd278f6f84ee72baa7bd5a9a83e27"
-  integrity sha512-lHU8zKuFdBQ3oKExQFrmrZWhaw/osGcWTSmj5+OmTtqep2auyNK28CCkJDOo2HS0vHnuoskVT+0YXPKTu9qnGg==
+gatsby-plugin-sharp@2.6.42:
+  version "2.6.42"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.6.42.tgz#94556e8633a7d15299d6aa8dc5e9a686af8debfb"
+  integrity sha512-uqra+GDLEfE5Kv8Th1lkQKS6FIRwPzwipoWJBogfPLTnl0L3t+ogdEhN8p5d7G6SYoaukuGrix162mbQXqASBA==
   dependencies:
     "@babel/runtime" "^7.11.2"
     async "^3.2.0"
