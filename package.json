@@ -117,5 +117,6 @@
     "package.json": [
       "prettier-package-json --write"
     ]
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
