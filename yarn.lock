@@ -10907,14 +10907,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-styled-components-dark-mode@npm:1.3.0":
-  version: 1.3.0
-  resolution: "gatsby-styled-components-dark-mode@npm:1.3.0"
+"gatsby-styled-components-dark-mode@npm:2.0.5":
+  version: 2.0.5
+  resolution: "gatsby-styled-components-dark-mode@npm:2.0.5"
   peerDependencies:
-    react: ^16.8.6
-    react-dom: ^16.8.6
+    react: ^17.0.0
+    react-dom: ^17.0.0
     styled-components: ^4.2.0
-  checksum: 470c25d3353664437ebfcbb2dcbe7a5cfcc27aec4e9ff28e2b1d7ab8b2c920a788fb55896372312107bbb14ab581ab3d8c8428a5f6d48f0b2d465b8b84df89df
+  checksum: a4dc2d07beda2ce745a67ad186457e6be2b8a68104b9bc2bda2174b5dd44fb403bcd94cc1d62a01c92f28957b51a8983e410f8196a8093110b0e8888177c1d0a
   languageName: node
   linkType: hard
 
@@ -17801,7 +17801,7 @@ __metadata:
     gatsby-remark-responsive-iframe: 2.8.0
     gatsby-remark-smartypants: 2.7.0
     gatsby-source-filesystem: 2.8.1
-    gatsby-styled-components-dark-mode: 1.3.0
+    gatsby-styled-components-dark-mode: 2.0.5
     gatsby-transformer-remark: 2.13.1
     gatsby-transformer-sharp: 2.9.0
     graphql: 15.4.0
