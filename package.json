@@ -24,6 +24,7 @@
     "start": "npm run develop",
     "test": "jest --colors",
     "test:coverage": "jest --coverage",
+    "test:updateSnapshot": "jest --updateSnapshot",
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
@@ -117,5 +118,6 @@
     "package.json": [
       "prettier-package-json --write"
     ]
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
