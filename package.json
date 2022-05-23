@@ -24,6 +24,7 @@
     "start": "npm run develop",
     "test": "jest --colors",
     "test:coverage": "jest --coverage",
+    "test:updateSnapshot": "jest --updateSnapshot",
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
