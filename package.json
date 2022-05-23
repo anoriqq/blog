@@ -68,7 +68,7 @@
     "@babel/preset-typescript": "7.12.7",
     "@testing-library/jest-dom": "5.11.8",
     "@testing-library/react": "11.2.7",
-    "@types/jest": "26.0.19",
+    "@types/jest": "26.0.24",
     "@types/node": "13.13.38",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
