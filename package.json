@@ -65,7 +65,7 @@
     "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "7.12.7",
+    "@babel/preset-typescript": "7.17.12",
     "@testing-library/jest-dom": "5.11.8",
     "@testing-library/react": "11.2.7",
     "@types/jest": "26.0.24",
