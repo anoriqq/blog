@@ -39,7 +39,7 @@ exports[`Layout renders correctly of location at "/" 1`] = `
     </div>
   </main>
   <footer>
-    © 2020, Built with
+    © 2022, Built with
      
     <a
       href="https://www.gatsbyjs.org"
@@ -89,7 +89,7 @@ exports[`Layout renders correctly of location at "hello-world" 1`] = `
     </div>
   </main>
   <footer>
-    © 2020, Built with
+    © 2022, Built with
      
     <a
       href="https://www.gatsbyjs.org"
