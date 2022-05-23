@@ -48,5 +48,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     'no-underscore-dangle': ['error', { allow: ['__PATH_PREFIX__'] }],
     'react/prop-types': 0,
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
 };
