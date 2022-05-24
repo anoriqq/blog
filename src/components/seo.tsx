@@ -70,6 +70,13 @@ export const PureSeo: React.FC<PureProps> = ({
   );
 };
 
+PureSeo.defaultProps = {
+  description: '',
+  title: '',
+  lang: '',
+  meta: undefined,
+};
+
 export const Seo: React.FC<Props> = ({ description, title, lang, meta }) => (
   <StaticQuery
     query={graphql`
@@ -96,3 +103,10 @@ export const Seo: React.FC<Props> = ({ description, title, lang, meta }) => (
     )}
   />
 );
+
+Seo.defaultProps = {
+  description: '',
+  title: '',
+  lang: '',
+  meta: undefined,
+};

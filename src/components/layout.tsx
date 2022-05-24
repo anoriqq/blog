@@ -76,4 +76,8 @@ const Layout: React.FC<Props> = ({ location, title, children }) => {
   );
 };
 
+Layout.defaultProps = {
+  title: '',
+};
+
 export default Layout;
