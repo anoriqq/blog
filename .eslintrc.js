@@ -11,10 +11,10 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
     'plugin:testing-library/react',
+    'prettier',
   ],
   overrides: [
     {
