@@ -13208,7 +13208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.0":
+"husky@npm:8.0.1":
   version: 8.0.1
   resolution: "husky@npm:8.0.1"
   bin:
@@ -18714,14 +18714,14 @@ __metadata:
     gatsby-transformer-remark: 2.16.1
     gatsby-transformer-sharp: 2.12.1
     graphql: 15.8.0
-    husky: ^8.0.0
+    husky: 8.0.1
     identity-obj-proxy: 3.0.0
     jest: 26.6.3
     lint-staged: 10.5.4
     prettier: 2.6.2
     prettier-package-json: 2.6.3
     prismjs: 1.28.0
-    prop-types: ^15.8.1
+    prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
     react-helmet: 6.1.0
@@ -19397,6 +19397,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:15.8.1, prop-types@npm:^15.8.1":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "prop-types@npm:^15.6.1, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
@@ -19405,17 +19416,6 @@ __metadata:
     object-assign: ^4.1.1
     react-is: ^16.8.1
   checksum: 5eef82fdda64252c7e75aa5c8cc28a24bbdece0f540adb60ce67c205cf978a5bd56b83e4f269f91c6e4dcfd80b36f2a2dec24d362e278913db2086ca9c6f9430
-  languageName: node
-  linkType: hard
-
-"prop-types@npm:^15.8.1":
-  version: 15.8.1
-  resolution: "prop-types@npm:15.8.1"
-  dependencies:
-    loose-envify: ^1.4.0
-    object-assign: ^4.1.1
-    react-is: ^16.13.1
-  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
   languageName: node
   linkType: hard
 
